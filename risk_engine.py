@@ -35,7 +35,7 @@ class RiskEngine:
 
         # Generate random Brownian Motion paths
         # Z ~ N(0, 1)
-        Z = np.random.normal(0, 1, (self.T * 252, num_simulations)) # Assuming T is integer days for simplicity adjustment in real implementation
+        Z = np.random.normal(0, 1, (int(self.T * 252), num_simulations)) # Assuming T is integer days for simplicity adjustment in real implementation
         
         # Vectorized Simulation
         # St = S0 * exp((mu - 0.5 * sigma^2)t + sigma * Wt)
